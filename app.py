@@ -10,7 +10,7 @@ from flask import Flask, request, jsonify, abort
 from dotenv import load_dotenv
 
 from yookassa import Payment
-from flask_cors import CORS
+# from flask_cors import CORS
 
 from payment import configure_yookassa
 from db import (
@@ -32,12 +32,12 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-CORS(
-    app,
-    resources={r"/*": {"origins": "*"}},
-    allow_headers=["Content-Type"],
-    methods=["GET", "POST", "OPTIONS"]
-)
+# CORS(
+#     app,
+#     resources={r"/*": {"origins": "*"}},
+#     allow_headers=["Content-Type"],
+#     methods=["GET", "POST", "OPTIONS"]
+# )
 
 # Настройка ЮKassa (берёт данные из окружения)
 configure_yookassa()
