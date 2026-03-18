@@ -32,6 +32,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
+init_db()
 # CORS(
 #     app,
 #     resources={r"/*": {"origins": "*"}},
