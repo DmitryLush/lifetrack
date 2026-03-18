@@ -43,7 +43,7 @@ CORS(
 configure_yookassa()
 
 RETURN_URL = os.getenv("RETURN_URL", "https://example.com/payment-success")
-WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET", "changeme")
+WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET")
 
 
 PRODUCTS = {
